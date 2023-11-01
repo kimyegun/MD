@@ -10,7 +10,7 @@ const fontcolor = {
 
 const Leftnavi = () => {
   return (
-    <div nav inNavbar style={{ backgroundColor: "#8f103d", height: "100%" }}>
+    <div nav inNavbar style={{ backgroundColor: "#faebd7", height: "100%" }}>
       <ul class="nav flex-column text-white w-100">
         <hr></hr>
         <li

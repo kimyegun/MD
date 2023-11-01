@@ -20,7 +20,14 @@ import {
   DropdownItem,
 } from "reactstrap";
 
+
+const navItemStyle = {
+  marginRight: '10px', // 원하는 간격으로 조정하세요
+  marginLeft: '200px'
+};
+
 const Header = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
   const [grade, setGrade] = useState("");
   const toggle = () => setIsOpen(!isOpen);
@@ -29,7 +36,7 @@ const Header = () => {
 
   const bannerst = {
     positon: "relative",
-    backgroundColor: "#8f103d",
+    backgroundColor: "white",
   };
 
   useEffect(() => {
@@ -103,42 +110,39 @@ const Header = () => {
       <Container>
         <Navbar className="navbar-expand-lg h2-nav">
           <NavbarBrand href="/">
-         
+         MDSoftware
           </NavbarBrand>
           <NavbarToggler onClick={toggle}>
             <span className="ti-menu text-white"></span>
           </NavbarToggler>
           <Collapse isOpen={isOpen} navbar id="header1">
-            <Nav navbar className="ms-auto">
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  회사소개 <i className="fa fa-angle-down m-l-5"></i>
-                </DropdownToggle>
-                <DropdownMenu className="b-none animated fadeInUp">
-                  <DropdownItem>
-                    <Link to={"/info"} state={{ num: 1 }}>
-                      회사소개
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <Link to={"/info"} state={{ num: 2 }}>
-                      프로그램소개
-                    </Link>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                
-                  <DropdownItem>
-                    <Link to={"/info"} state={{ num: 4 }}>
-                      문의안내
-                    </Link>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+      
+           
+              
+
+             
+             
+          <NavItem style={navItemStyle}>
+    <Link to={"/info"} state={{ num: 1 }}>
+        회사소개
+    </Link>
+</NavItem>
+
+<NavItem style={navItemStyle}>
+    <Link to={"/info"} state={{ num: 2 }}>
+        프로그램소개
+    </Link>
+</NavItem>
+
+<NavItem style={navItemStyle}>
+    <Link to={"/info"} state={{ num: 4 }}>
+        문의안내
+    </Link>
+</NavItem>
+         
+          
            
 
-              {loginSession && <NavItem>{gradeCheck()}</NavItem>}
-              <NavItem>{sessionCheck()}</NavItem>
-            </Nav>
           </Collapse>
         </Navbar>
       </Container>

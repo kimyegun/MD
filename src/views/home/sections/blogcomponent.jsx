@@ -2,9 +2,9 @@
 import React from 'react';
 import { Row, Col, Container, Card } from 'reactstrap';
 
-import img1 from '../../../assets/images/blog/blog-home/img3.jpg';
-import img2 from '../../../assets/images/blog/blog-home/img2.jpg';
-import img3 from '../../../assets/images/blog/blog-home/img1.jpg';
+import img1 from '../../../assets/images/blog/blog-home/coupon.png';
+import img2 from '../../../assets/images/blog/blog-home/test.png';
+import img3 from '../../../assets/images/blog/blog-home/notebook.png';
 
 const BlogComponent = () => {
     return (
